@@ -3,9 +3,9 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-mkdir -p ./src-pkg-name
-cp -rvf ./debian ./src-pkg-name/
-cd ./src-pkg-name/
+git clone https://github.com/KhronosGroup/SPIRV-LLVM-Translator -b v17.0.0 ./spirv-llvm-translator-17
+cp -rvf ./debian /spirv-llvm-translator-17/
+cd ./spirv-llvm-translator-17
 
 # Get build deps
 apt-get build-dep ./ -y
